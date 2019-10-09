@@ -19,6 +19,9 @@ public class CommonUtils {
 		if(args.length<1)
 			return ;
 		
+		
+		
+		
 		String [] str = args[0].split(",");
 		int [] arr = new int[str.length];
 		

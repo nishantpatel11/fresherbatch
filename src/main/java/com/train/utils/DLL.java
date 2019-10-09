@@ -1,19 +1,23 @@
 package com.train.utils;
 
 public class DLL { 
-	
+
 	Node head;  
 
 	class Node { 
+		
 		int data; 
 		Node prev; 
 		Node next; 
 
-		Node(int d) { data = d; } 
+		Node(int data) {
+			this.data = data;
+		}
+		
 	} 
 
-	public void push(int new_data) 
-	{ 
+	public void push(int new_data) {
+		
 		Node new_Node = new Node(new_data); 
 		new_Node.next = head; 
 		new_Node.prev = null; 
@@ -24,8 +28,7 @@ public class DLL {
 		head = new_Node; 
 	} 
 
-	public void InsertAfter(Node prev_Node, int new_data) 
-	{ 
+	public void InsertAfter(Node prev_Node, int new_data) { 
 
 		if (prev_Node == null) { 
 			System.out.println("The given previous node cannot be NULL "); 
@@ -41,8 +44,47 @@ public class DLL {
 			new_node.next.prev = new_node; 
 	} 
 
-	void append(int new_data) 
-	{ 
+
+	Node deleteNode(Node head_ref, Node del) { 
+
+		if (head == null || del == null)  
+			return null; 
+
+		if (head == del)  
+			head = del.next; 
+		
+		if (del.next != null)  
+			del.next.prev = del.prev; 
+
+		if (del.prev != null)  
+			del.prev.next = del.next; 
+		 
+
+		del = null; 
+		return head; 
+	} 
+
+
+	void deleteNodeAtGivenPos(Node head, int n) { 
+
+		if (head == null || n <= 0) 
+			return; 
+
+		Node current = head; 
+		int i; 
+		for (i = 1; current != null && i < n; i++) 
+			current = current.next; 
+
+		if (current == null) 
+			return; 
+
+		deleteNode(head, current); 
+	} 
+
+
+	
+	void append(int new_data) {
+
 		Node new_node = new Node(new_data); 
 		Node last = head; /* used in step 5*/
 		new_node.next = null; 
@@ -58,10 +100,11 @@ public class DLL {
 
 		last.next = new_node; 
 		new_node.prev = last; 
+	
 	} 
 
-	public void printlist(Node node) 
-	{ 
+	public void printlist(Node node) {
+		
 		Node last = null; 
 		System.out.println("Traversal in forward Direction"); 
 		while (node != null) { 
@@ -75,6 +118,7 @@ public class DLL {
 			System.out.print(last.data + " "); 
 			last = last.prev; 
 		} 
+	
 	} 
 } 
 

@@ -1,5 +1,7 @@
 package com.train;
 
+import java.util.Date;
+
 import com.train.utils.CommonUtils;
 
 public class Example {
@@ -11,6 +13,7 @@ public class Example {
 		CommonUtils.printCommandLine(args);
 		CommonUtils.printSortCommandLineArgs(args);
 		
+		Date di;
 	}
 
 }

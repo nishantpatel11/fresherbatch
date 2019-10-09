@@ -4,6 +4,8 @@ public class DLL {
 
 	Node head;  
 
+	int size;
+	
 	class Node { 
 		
 		int data; 
@@ -22,6 +24,7 @@ public class DLL {
 		new_Node.next = head; 
 		new_Node.prev = null; 
 
+		this.size++;
 		if (head != null) 
 			head.prev = new_Node; 
 
@@ -42,6 +45,7 @@ public class DLL {
 		new_node.prev = prev_Node; 
 		if (new_node.next != null) 
 			new_node.next.prev = new_node; 
+		this.size++;
 	} 
 
 
@@ -61,6 +65,7 @@ public class DLL {
 		 
 
 		del = null; 
+		size--;
 		return head; 
 	} 
 
@@ -98,6 +103,7 @@ public class DLL {
 		while (last.next != null) 
 			last = last.next; 
 
+		size++;
 		last.next = new_node; 
 		new_node.prev = last; 
 	
@@ -120,5 +126,10 @@ public class DLL {
 		} 
 	
 	} 
+	
+	
+	public int getNumberNode() {
+		return this.size;
+	}
 } 
 

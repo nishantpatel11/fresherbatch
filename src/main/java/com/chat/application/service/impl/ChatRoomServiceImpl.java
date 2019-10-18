@@ -36,12 +36,7 @@ public class ChatRoomServiceImpl implements ChatRoomService{
 	}
 
 
-
-
-
-
-
-
+	
 
 	@Override
 	public Boolean addUserIntoChat(String userName,Integer chatRoomId) {

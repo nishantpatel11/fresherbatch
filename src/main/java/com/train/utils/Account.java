@@ -1,5 +1,7 @@
 package com.train.utils;
 
+import com.train.exceptionhandler.InsufficientBalanceException;
+
 public class Account {
 
 
@@ -24,11 +26,11 @@ public class Account {
 		balance = balance + amount;
 	}
 
-	public void withdraw(double amount)
+	public void withdraw(double amount) throws InsufficientBalanceException
 	{
 		if((balance - amount ) <= -1) {
 			System.out.println("InSufficient Balance");
-			return ;
+			throw new InsufficientBalanceException(" InSufficient Balance ");
 		}
 			
 		balance = balance - amount;

@@ -1,0 +1,8 @@
+2019-10-18 13:42:39,188 +0530 [main] DEBUG (Log4jExample.java:17) - My Debug Log
+2019-10-18 13:42:39,191 +0530 [main] INFO  (Log4jExample.java:18) - My Info Log
+2019-10-18 13:42:39,192 +0530 [main] WARN  (Log4jExample.java:19) - My Warn Log
+2019-10-18 13:42:39,192 +0530 [main] ERROR (Log4jExample.java:20) - My error log
+2019-10-18 13:42:39,192 +0530 [main] FATAL (Log4jExample.java:21) - My fatal log
+2019-10-18 13:42:39,193 +0530 [main] DEBUG (MathUtils.java:10) - inputs are:4, 5
+2019-10-18 13:42:39,193 +0530 [main] DEBUG (MathUtils.java:10) - inputs are:40, 50
+2019-10-18 13:42:39,202 +0530 [main] DEBUG (MathUtils.java:10) - inputs are:1, 5

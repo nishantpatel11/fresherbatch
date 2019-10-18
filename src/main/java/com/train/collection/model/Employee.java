@@ -6,6 +6,7 @@ public class Employee {
 	private String employeeName;
 	private Long employeePhone;
 	private Double basicSalary;
+	private Date dateOfBrith;
 
 	public Employee() {
 		super();
@@ -54,6 +55,13 @@ public class Employee {
 		this.basicSalary = basicSalary;
 	}
 
+	public Date getDateOfBrith() {
+		return dateOfBrith;
+	}
+
+	public void setDateOfBrith(Date dateOfBrith) {
+		this.dateOfBrith = dateOfBrith;
+	}
 
 	
 	@Override
@@ -107,8 +115,9 @@ public class Employee {
 	@Override
 	public String toString() {
 		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", employeePhone="
-				+ employeePhone + ", basicSalary=" + basicSalary + "]";
+				+ employeePhone + ", basicSalary=" + basicSalary + ", dateOfBrith=" + dateOfBrith + "]";
 	}
+
 
 
 }

@@ -1,7 +1,5 @@
 package com.train.utils;
 
-import java.util.Stack;
-
 public class StackArray {
 
 	

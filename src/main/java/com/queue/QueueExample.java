@@ -1,6 +1,5 @@
 package com.queue;
 
-import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class QueueExample {

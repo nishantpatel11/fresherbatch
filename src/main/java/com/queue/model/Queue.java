@@ -3,26 +3,26 @@ package com.queue.model;
 public class Queue {
 
 	static class Node { 
-		int data; 
+		Patient patient; 
 		int priority; 
 		Node next; 
 
 	} 
 
 	static Node node = new Node(); 
-	static Node newNode(int d, int p) {
+	static Node newNode(Patient patient, int p) {
 		
 		Node temp = new Node(); 
-		temp.data = d; 
+		temp.patient = patient; 
 		temp.priority = p; 
 		temp.next = null; 
 
 		return temp; 
 	} 
 
-	static int peek(Node head) {
+	static Patient peek(Node head) {
 		
-		return (head).data; 
+		return head.patient; 
 	} 
 
 	static Node pop(Node head) {
@@ -31,10 +31,10 @@ public class Queue {
 		return head; 
 	} 
 
-	static Node push(Node head, int d, int p) {
+	static Node push(Node head, Patient patient, int p) {
 		
 		Node start = (head); 
-		Node temp = newNode(d, p); 
+		Node temp = newNode(patient, p); 
 
 		if ((head).priority < p) { 
 
@@ -56,20 +56,19 @@ public class Queue {
 
 	static int isEmpty(Node head) 
 	{ 
-		return ((head) == null)?1:0; 
+		return (head == null)?1:0; 
 	} 
 
 	public static void main(String args[]) 
 	{ 
-		// Create a Priority Queue 
-		// 7.4.5.6 
-		Node pq = newNode(4, 1); 
-		pq =push(pq, 5, 2); 
-		pq =push(pq, 6, 5); 
-		pq =push(pq, 7, 5); 
+		Node pq = newNode(new Patient(1, "nish", 23, "Male"), 1); 
+		pq =push(pq, new Patient(1, "nish", 24, "Male"), 2); 
+		pq =push(pq, new Patient(1, "nish", 25, "Male"), 5); 
+		pq =push(pq, new Patient(1, "nish", 26, "Male"), 5); 
 
+		System.out.println(isEmpty(pq));
 		while (isEmpty(pq)==0) { 
-			System.out.printf("%d ", peek(pq)); 
+			System.out.println( peek(pq)); 
 			pq=pop(pq); 
 		} 
 

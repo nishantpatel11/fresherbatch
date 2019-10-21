@@ -79,10 +79,7 @@ public class CalculationServiceImpl {
 		return true;
 	}
 
-	private StringBuilder StringBuilder(String string) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
+	
+	
+	
 }
